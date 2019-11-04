@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/model/EmployeeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/model/EmployeeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/web/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/web/EmployeeController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +114,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571326665678</updated>
       <workItem from="1572867545181" duration="86000" />
-      <workItem from="1572867770048" duration="7554000" />
+      <workItem from="1572867770048" duration="8763000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572900441596</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="users add">
+      <created>1572903458342</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1572903458342</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +195,7 @@
     <MESSAGE value="refactor" />
     <MESSAGE value="sql" />
     <MESSAGE value="sql1" />
-    <option name="LAST_COMMIT_MESSAGE" value="sql1" />
+    <MESSAGE value="users add" />
+    <option name="LAST_COMMIT_MESSAGE" value="users add" />
   </component>
 </project>
