@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TBL_EMPLOYEES")
+@Table(name="TBL_USERS")
 public class EmployeeEntity {
 
     @Id
@@ -24,6 +24,17 @@ public class EmployeeEntity {
 
     @Column(name="email", nullable=false, length=200)
     private String email;
+
+    @Column(name="password", nullable=false, length=45)
+    private String password;
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public Long getId() {
         return id;
