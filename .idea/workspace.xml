@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/spring/GreetingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/spring/GreetingController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571326665678</updated>
       <workItem from="1572867545181" duration="86000" />
-      <workItem from="1572867770048" duration="1904000" />
+      <workItem from="1572867770048" duration="2932000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -106,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572868596442</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="+database setting">
+      <created>1572896136679</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572896136679</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,6 +131,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="go!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="go!!!" />
+    <MESSAGE value="+database setting" />
+    <option name="LAST_COMMIT_MESSAGE" value="+database setting" />
   </component>
 </project>
