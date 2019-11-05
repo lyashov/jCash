@@ -1,12 +1,12 @@
 package com.mycash.repository;
 
 
-import com.mycash.model.EmployeeEntity;
+import com.mycash.model.UsersEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EmployeeRepository
-        extends JpaRepository<EmployeeEntity, Long> {
+public interface UsersRepository
+        extends JpaRepository<UsersEntity, Long> {
 
 }

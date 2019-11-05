@@ -1,8 +1,8 @@
 package com.mycash.web;
 
 import com.mycash.exception.RecordNotFoundException;
-import com.mycash.model.EmployeeEntity;
-import com.mycash.service.EmployeeServiceDAO;
+import com.mycash.model.UsersEntity;
+import com.mycash.service.UsersServiceDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -13,32 +13,32 @@ import java.util.List;
 
 @RestController
 
-@RequestMapping("/employees")
-public class EmployeeController
+@RequestMapping("/users")
+public class UsersController
 {
     @Autowired
-    EmployeeServiceDAO service;
+    UsersServiceDAO service;
  
     @GetMapping
-    public ResponseEntity<List<EmployeeEntity>> getAllEmployees() {
-        List<EmployeeEntity> list = service.getAllEmployees();
+    public ResponseEntity<List<UsersEntity>> getAllEmployees() {
+        List<UsersEntity> list = service.getAllEmployees();
  
-        return new ResponseEntity<List<EmployeeEntity>>(list, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<List<UsersEntity>>(list, new HttpHeaders(), HttpStatus.OK);
     }
  
     @GetMapping("/{id}")
-    public ResponseEntity<EmployeeEntity> getEmployeeById(@PathVariable("id") Long id)
+    public ResponseEntity<UsersEntity> getEmployeeById(@PathVariable("id") Long id)
                                                     throws RecordNotFoundException {
-        EmployeeEntity entity = service.getEmployeeById(id);
+        UsersEntity entity = service.getEmployeeById(id);
  
-        return new ResponseEntity<EmployeeEntity>(entity, new HttpHeaders(), HttpStatus.OK);
+        return new ResponseEntity<UsersEntity>(entity, new HttpHeaders(), HttpStatus.OK);
     }
  
     @PostMapping
-    public ResponseEntity<EmployeeEntity> createOrUpdateEmployee(EmployeeEntity employee)
+    public ResponseEntity<UsersEntity> createOrUpdateEmployee(UsersEntity employee)
                                                     throws RecordNotFoundException {
-        EmployeeEntity updated = service.createOrUpdateEmployee(employee);
-        return new ResponseEntity<EmployeeEntity>(updated, new HttpHeaders(), HttpStatus.OK);
+        UsersEntity updated = service.createOrUpdateEmployee(employee);
+        return new ResponseEntity<UsersEntity>(updated, new HttpHeaders(), HttpStatus.OK);
     }
  
     @DeleteMapping("/{id}")

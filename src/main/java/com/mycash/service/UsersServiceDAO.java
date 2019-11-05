@@ -1,8 +1,8 @@
 package com.mycash.service;
 
 import com.mycash.exception.RecordNotFoundException;
-import com.mycash.model.EmployeeEntity;
-import com.mycash.repository.EmployeeRepository;
+import com.mycash.model.UsersEntity;
+import com.mycash.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class EmployeeServiceDAO {
+public class UsersServiceDAO {
      
     @Autowired
-    EmployeeRepository repository;
+    UsersRepository repository;
 
 
    /* EntityManager entityManager;
@@ -29,20 +29,20 @@ public class EmployeeServiceDAO {
         }
     }*/
 
-    public List<EmployeeEntity> getAllEmployees()
+    public List<UsersEntity> getAllEmployees()
     {
-        List<EmployeeEntity> employeeList = repository.findAll();
+        List<UsersEntity> employeeList = repository.findAll();
          
         if(employeeList.size() > 0) {
             return employeeList;
         } else {
-            return new ArrayList<EmployeeEntity>();
+            return new ArrayList<UsersEntity>();
         }
     }
      
-    public EmployeeEntity getEmployeeById(Long id) throws RecordNotFoundException
+    public UsersEntity getEmployeeById(Long id) throws RecordNotFoundException
     {
-        Optional<EmployeeEntity> employee = repository.findById(id);
+        Optional<UsersEntity> employee = repository.findById(id);
          
         if(employee.isPresent()) {
             return employee.get();
@@ -51,13 +51,13 @@ public class EmployeeServiceDAO {
         }
     }
      
-    public EmployeeEntity createOrUpdateEmployee(EmployeeEntity entity) throws RecordNotFoundException
+    public UsersEntity createOrUpdateEmployee(UsersEntity entity) throws RecordNotFoundException
     {
-        Optional<EmployeeEntity> employee = repository.findById(entity.getId());
+        Optional<UsersEntity> employee = repository.findById(entity.getId());
          
         if(employee.isPresent())
         {
-            EmployeeEntity newEntity = employee.get();
+            UsersEntity newEntity = employee.get();
             newEntity.setEmail(entity.getEmail());
             newEntity.setFirstName(entity.getFirstName());
             newEntity.setLastName(entity.getLastName());
@@ -74,7 +74,7 @@ public class EmployeeServiceDAO {
      
     public void deleteEmployeeById(Long id) throws RecordNotFoundException
     {
-        Optional<EmployeeEntity> employee = repository.findById(id);
+        Optional<UsersEntity> employee = repository.findById(id);
          
         if(employee.isPresent())
         {

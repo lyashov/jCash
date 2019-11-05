@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/web/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/web/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/model/EmployeeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/model/UsersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/repository/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/repository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/service/EmployeeServiceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/service/UsersServiceDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/web/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/web/UsersController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -114,7 +118,9 @@
       <option name="presentableId" value="Default" />
       <updated>1571326665678</updated>
       <workItem from="1572867545181" duration="86000" />
-      <workItem from="1572867770048" duration="8763000" />
+      <workItem from="1572867770048" duration="11911000" />
+      <workItem from="1572944306946" duration="118000" />
+      <workItem from="1572944922863" duration="939000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -172,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572903458342</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="users add2">
+      <created>1572904681771</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1572904681771</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,7 +196,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -196,6 +211,7 @@
     <MESSAGE value="sql" />
     <MESSAGE value="sql1" />
     <MESSAGE value="users add" />
-    <option name="LAST_COMMIT_MESSAGE" value="users add" />
+    <MESSAGE value="users add2" />
+    <option name="LAST_COMMIT_MESSAGE" value="users add2" />
   </component>
 </project>
