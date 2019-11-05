@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycash/model/OperationsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycash/model/TypeOperationsEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycash/repository/TypeOperatorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycash/service/TypeOperatorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/mycash/web/TypeOperationsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/type.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/service/UsersServiceDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/service/UsersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/web/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycash/web/UsersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/greeting.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -51,6 +59,7 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mycash.web" />
       <recent name="com.mycash.service" />
+      <recent name="com.mycash.model" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\work\Innopolis\myCash_2\src\main\resources\templates" />
@@ -124,7 +133,7 @@
       <workItem from="1572867770048" duration="11911000" />
       <workItem from="1572944306946" duration="118000" />
       <workItem from="1572944922863" duration="939000" />
-      <workItem from="1572947831911" duration="3187000" />
+      <workItem from="1572947831911" duration="11302000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -210,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572948466406</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="users add4">
+      <created>1572952304833</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572952304833</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +254,7 @@
     <MESSAGE value="users add" />
     <MESSAGE value="users add2" />
     <MESSAGE value="users add3" />
-    <option name="LAST_COMMIT_MESSAGE" value="users add3" />
+    <MESSAGE value="users add4" />
+    <option name="LAST_COMMIT_MESSAGE" value="users add4" />
   </component>
 </project>

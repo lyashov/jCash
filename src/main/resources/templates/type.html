@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--+bootstrap-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!--+bootstrap-->
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#">31soft.ru</a>
+</nav>
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <th width="80">ID</th>
+            <th width="120">Type operation</th>
+        </tr>
+        <tr th:each="t: ${type}">
+            <td th:text="${t.getId()}"/>
+            <td th:text="${t.getName()}"/>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

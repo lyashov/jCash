@@ -1,6 +1,8 @@
 package com.mycash.web;
 
+import com.mycash.model.TypeOperationsEntity;
 import com.mycash.model.UsersEntity;
+import com.mycash.service.TypeOperatorService;
 import com.mycash.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,26 +15,19 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class UsersController {
-    private UsersService usersService;
+public class TypeOperationsController {
+    private TypeOperatorService tService;
 
     @Autowired(required = true)
-    public void setUsersService(UsersService usersService) {
-        this.usersService = usersService;
+    public void setUsersService(TypeOperatorService tService) {
+        this.tService = tService;
     }
 
-    @RequestMapping(value = "users", method = RequestMethod.GET)
+    @RequestMapping(value = "type", method = RequestMethod.GET)
     public String listBooks(Model model){
-        List<UsersEntity> list = usersService.getAllEmployees();
-        model.addAttribute("users", list);
-        return "users";
-    }
-
-
-    @GetMapping("/")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="Username") String name, Model model) {
-        model.addAttribute("name", name);
-        return "index";
+        List<TypeOperationsEntity> list = tService.getAllTypeOperations();
+        model.addAttribute("type", list);
+        return "type";
     }
 
 }
