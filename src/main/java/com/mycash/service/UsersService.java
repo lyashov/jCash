@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UsersServiceDAO {
+public class UsersService {
      
     @Autowired
     UsersRepository repository;
