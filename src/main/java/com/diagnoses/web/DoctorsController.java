@@ -1,7 +1,9 @@
 package com.diagnoses.web;
 
 import com.diagnoses.model.DoctorsEntity;
+import com.diagnoses.model.PacientsEntity;
 import com.diagnoses.service.DoctorsService;
+import com.diagnoses.service.PacientsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,6 +17,7 @@ import java.util.List;
 @Controller
 public class DoctorsController {
     private DoctorsService doctorsService;
+    private PacientsService pacientsService;
 
     @Autowired(required = true)
     public void setdoctorsService(DoctorsService doctorsService) {
@@ -26,6 +29,18 @@ public class DoctorsController {
         List<DoctorsEntity> list = doctorsService.getAllDoctors();
         model.addAttribute("doctors", list);
         return "doctors";
+    }
+
+    @Autowired(required = true)
+    public void setPacientsService(PacientsService pacientsService) {
+        this.pacientsService = pacientsService;
+    }
+
+    @RequestMapping(value = "pacients", method = RequestMethod.GET)
+    public String listPacients(Model model){
+        List<PacientsEntity> list = pacientsService.getAllPacients();
+        model.addAttribute("pacients", list);
+        return "pacients";
     }
 
 
