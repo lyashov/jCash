@@ -1,16 +1,12 @@
-package com.mycash.web;
+package com.diagnoses.web;
 
-import com.mycash.model.TypeOperationsEntity;
-import com.mycash.model.UsersEntity;
-import com.mycash.service.TypeOperatorService;
-import com.mycash.service.UsersService;
+import com.diagnoses.model.DiagnosesEmptity;
+import com.diagnoses.service.TypeOperatorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -25,7 +21,7 @@ public class TypeOperationsController {
 
     @RequestMapping(value = "type", method = RequestMethod.GET)
     public String listBooks(Model model){
-        List<TypeOperationsEntity> list = tService.getAllTypeOperations();
+        List<DiagnosesEmptity> list = tService.getAllTypeOperations();
         model.addAttribute("type", list);
         return "type";
     }

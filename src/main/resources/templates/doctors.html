@@ -33,19 +33,19 @@
     <table class="tg">
         <tr>
             <th width="80">ID</th>
-            <th width="120">FirstName</th>
-            <th width="120">LastName</th>
-            <th width="120">Mail</th>
-            <th width="60">Edit</th>
-            <th width="60">Delete</th>
+            <th width="120">Имя</th>
+            <th width="120">Отчество</th>
+            <th width="120">Фамилия</th>
+            <th width="60">Логин</th>
+            <th width="60">Почта</th>
         </tr>
-        <tr th:each="user: ${users}">
-            <td th:text="${user.getId()}"/>
-            <td th:text="${user.getFirstName()}"/>
-            <th width="120">LastName</th>
-            <th width="120">Mail</th>
-            <th width="60">Edit</th>
-            <th width="60">Delete</th>
+        <tr th:each="doctor: ${doctors}">
+            <td th:text="${doctor.getId()}"/>
+            <td th:text="${doctor.getFirstName()}"/>
+            <td th:text="${doctor.getSecondName()}"/>
+            <td th:text="${doctor.getLastName()}"/>
+            <td th:text="${doctor.getLogin()}"/>
+            <td th:text="${doctor.getEmail()}"/>
         </tr>
     </table>
 

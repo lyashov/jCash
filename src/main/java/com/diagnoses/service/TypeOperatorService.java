@@ -1,10 +1,7 @@
-package com.mycash.service;
+package com.diagnoses.service;
 
-import com.mycash.exception.RecordNotFoundException;
-import com.mycash.model.TypeOperationsEntity;
-import com.mycash.model.UsersEntity;
-import com.mycash.repository.TypeOperatorRepository;
-import com.mycash.repository.UsersRepository;
+import com.diagnoses.exception.RecordNotFoundException;
+import com.diagnoses.model.DiagnosesEmptity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,20 +16,20 @@ public class TypeOperatorService {
     TypeOperatorRepository repository;
 
 
-    public List<TypeOperationsEntity> getAllTypeOperations()
+    public List<DiagnosesEmptity> getAllTypeOperations()
     {
-        List<TypeOperationsEntity> typeOperationsList = repository.findAll();
+        List<DiagnosesEmptity> typeOperationsList = repository.findAll();
          
         if(typeOperationsList.size() > 0) {
             return typeOperationsList;
         } else {
-            return new ArrayList<TypeOperationsEntity>();
+            return new ArrayList<DiagnosesEmptity>();
         }
     }
 
-    public TypeOperationsEntity getTypeOperationsById(Long id) throws RecordNotFoundException
+    public DiagnosesEmptity getTypeOperationsById(Long id) throws RecordNotFoundException
     {
-        Optional<TypeOperationsEntity> typeOperations = repository.findById(id);
+        Optional<DiagnosesEmptity> typeOperations = repository.findById(id);
 
         if(typeOperations.isPresent()) {
             return typeOperations.get();
@@ -41,13 +38,13 @@ public class TypeOperatorService {
         }
     }
 
-    public TypeOperationsEntity createOrUpdateTypeOperations(TypeOperationsEntity entity) throws RecordNotFoundException
+    public DiagnosesEmptity createOrUpdateTypeOperations(DiagnosesEmptity entity) throws RecordNotFoundException
     {
-        Optional<TypeOperationsEntity> typeOperations = repository.findById(entity.getId());
+        Optional<DiagnosesEmptity> typeOperations = repository.findById(entity.getId());
 
         if(typeOperations.isPresent())
         {
-            TypeOperationsEntity newEntity = typeOperations.get();
+            DiagnosesEmptity newEntity = typeOperations.get();
             newEntity.setId(entity.getId());
             newEntity.setName(entity.getName());
 
@@ -63,7 +60,7 @@ public class TypeOperatorService {
 
     public void deleteTypeOperationsById(Long id) throws RecordNotFoundException
     {
-        Optional<TypeOperationsEntity> typeOperations = repository.findById(id);
+        Optional<DiagnosesEmptity> typeOperations = repository.findById(id);
 
         if(typeOperations.isPresent())
         {
