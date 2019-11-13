@@ -22,7 +22,7 @@ public class DoctorsController {
     }
 
     @RequestMapping(value = "doctors", method = RequestMethod.GET)
-    public String listBooks(Model model){
+    public String listDoctors(Model model){
         List<DoctorsEntity> list = doctorsService.getAllDoctors();
         model.addAttribute("doctors", list);
         return "doctors";
