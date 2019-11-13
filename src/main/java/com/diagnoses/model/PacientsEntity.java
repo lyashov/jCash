@@ -33,9 +33,6 @@ public class PacientsEntity {
     @Column(name="sex")
     private Boolean sex;
 
-    @Column(name="birgthday")
-    private Date birgthday;
-
     public Long getId() {
         return id;
     }
@@ -100,19 +97,12 @@ public class PacientsEntity {
         this.sex = sex;
     }
 
-    public Date getBirgthday() {
-        return birgthday;
-    }
-
-    public void setBirgthday(Date birgthday) {
-        this.birgthday = birgthday;
-    }
 
     @Override
     public String toString() {
         return "PacientsEntity [id=" + id + ", firstName=" + firstName +
                 ", secondName=" + secondName + ", lastName=" + lastName +
-                ", email=" + email + (sex ? 'м':'ж') + " , birgthday " + birgthday +
+                ", email=" + email + (sex ? 'м':'ж')  +
                 ", login=" + login + "]";
     }
 }
