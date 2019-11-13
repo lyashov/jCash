@@ -3,6 +3,7 @@ package com.diagnoses.model;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name="PACIENTS")
@@ -11,6 +12,19 @@ public class PacientsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+
+   // @JoinColumn(name = "id_pacient", referencedColumnName = "id")
+    @OneToMany
+    private Set<VisitsEntity> visits;
+
+    public String getVisits() {
+        return visits.toArray().toString();
+    }
+
+    public void setVisits(Set<VisitsEntity> visits) {
+        this.visits = visits;
+    }
 
     @Column(name="first_name", nullable=false, length=200)
     private String firstName;

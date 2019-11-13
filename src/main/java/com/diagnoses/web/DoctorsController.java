@@ -1,7 +1,9 @@
 package com.diagnoses.web;
 
+import com.diagnoses.model.DiagnosesEmptity;
 import com.diagnoses.model.DoctorsEntity;
 import com.diagnoses.model.PacientsEntity;
+import com.diagnoses.service.DiagnosesService;
 import com.diagnoses.service.DoctorsService;
 import com.diagnoses.service.PacientsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,12 @@ import java.util.List;
 public class DoctorsController {
     private DoctorsService doctorsService;
     private PacientsService pacientsService;
+    private DiagnosesService diagnosesService;
+
+    @Autowired(required = true)
+    public void setDiagnosesService(DiagnosesService diagnosesService) {
+        this.diagnosesService = diagnosesService;
+    }
 
     @Autowired(required = true)
     public void setdoctorsService(DoctorsService doctorsService) {

@@ -27,6 +27,7 @@
             <th width="120">Фамилия</th>
             <th width="60">Логин</th>
             <th width="60">Почта</th>
+
         </tr>
         <tr th:each="pacient: ${pacients}">
             <td th:text="${pacient.getId()}"/>
@@ -35,6 +36,8 @@
             <td th:text="${pacient.getLastName()}"/>
             <td th:text="${pacient.getLogin()}"/>
             <td th:text="${pacient.getEmail()}"/>
+
+
         </tr>
     </table>
 
