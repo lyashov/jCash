@@ -28,13 +28,13 @@
             <th width="60">Логин</th>
             <th width="60">Почта</th>
         </tr>
-        <tr th:each="doctor: ${}">
-            <td th:text="${doctor.getId()}"/>
-            <td th:text="${doctor.getFirstName()}"/>
-            <td th:text="${doctor.getSecondName()}"/>
-            <td th:text="${doctor.getLastName()}"/>
-            <td th:text="${doctor.getLogin()}"/>
-            <td th:text="${doctor.getEmail()}"/>
+        <tr th:each="pacient: ${pacients}">
+            <td th:text="${pacient.getId()}"/>
+            <td th:text="${pacient.getFirstName()}"/>
+            <td th:text="${pacient.getSecondName()}"/>
+            <td th:text="${pacient.getLastName()}"/>
+            <td th:text="${pacient.getLogin()}"/>
+            <td th:text="${pacient.getEmail()}"/>
         </tr>
     </table>
 
