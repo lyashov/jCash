@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <div th:replace="fragments/header :: header"></div>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<main role="main" class="container">
+
+
+</main>
+
+    <table class="tg">
+        <tr>
+            <th width="80">ID</th>
+            <th width="120">Имя</th>
+            <th width="120">Отчество</th>
+            <th width="120">Фамилия</th>
+            <th width="60">Логин</th>
+            <th width="60">Почта</th>
+        </tr>
+        <tr th:each="doctor: ${}">
+            <td th:text="${doctor.getId()}"/>
+            <td th:text="${doctor.getFirstName()}"/>
+            <td th:text="${doctor.getSecondName()}"/>
+            <td th:text="${doctor.getLastName()}"/>
+            <td th:text="${doctor.getLogin()}"/>
+            <td th:text="${doctor.getEmail()}"/>
+        </tr>
+    </table>
+
+</body>
+</html>
