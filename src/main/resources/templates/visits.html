@@ -22,23 +22,16 @@
     <table class="tg">
         <tr>
             <th width="80">ID</th>
-            <th width="120">Имя</th>
-            <th width="120">Отчество</th>
-            <th width="120">Фамилия</th>
-            <th width="60">Логин</th>
-            <th width="60">Почта</th>
+            <th width="120">Дата</th>
+            <th width="120">ИД Доктор</th>
+            <th width="120">Пациент</th>
 
         </tr>
-        <tr th:each="pacient: ${pacients}">
-            <td th:text="${pacient.getId()}"/>
-            <td th:text="${pacient.getFirstName()}"/>
-            <td th:text="${pacient.getSecondName()}"/>
-            <td th:text="${pacient.getLastName()}"/>
-            <td th:text="${pacient.getLogin()}"/>
-            <td th:text="${pacient.getEmail()}"/>
-            <span th:each="producttbl: ${pacients}"> <span th:text="${producttbl}" /></span>
-
-
+        <tr th:each="visit: ${visits}">
+            <td th:text="${visit.getId()}"/>
+            <td th:text="${visit.getDate_visit()}"/>
+            <td th:text="${visit.getId_doctor()}"/>
+            <td th:text="${visit.getPacient()}"/>
         </tr>
     </table>
 

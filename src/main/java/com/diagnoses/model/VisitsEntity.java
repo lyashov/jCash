@@ -11,8 +11,9 @@ public class VisitsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="id_pacient")
-    private Long id_pacient;
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "id_pacient", nullable = false)
+    private PacientsEntity pacient;
 
     @Column(name="id_doctor")
     private Long id_doctor;
@@ -23,20 +24,20 @@ public class VisitsEntity {
     @Column(name="id_diagnosis")
     private Long id_diagnosis;
 
+    public PacientsEntity getPacient() {
+        return pacient;
+    }
+
+    public void setPacient(PacientsEntity pacient) {
+        this.pacient = pacient;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getId_pacient() {
-        return id_pacient;
-    }
-
-    public void setId_pacient(Long id_pacient) {
-        this.id_pacient = id_pacient;
     }
 
     public Long getId_doctor() {

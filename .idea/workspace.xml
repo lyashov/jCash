@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/DiagnosesService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/visits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/DoctorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/DoctorsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/doctors.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/doctors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/DoctorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pacients.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pacients.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -168,7 +165,7 @@
       <workItem from="1573020770510" duration="1292000" />
       <workItem from="1573057661204" duration="1175000" />
       <workItem from="1573406594669" duration="7098000" />
-      <workItem from="1573476895050" duration="36262000" />
+      <workItem from="1573476895050" duration="39677000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -366,7 +363,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573653410448</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="templates add">
+      <created>1573669066011</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1573669066011</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +411,7 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/web/DoctorsController.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java</url>
           <line>48</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>

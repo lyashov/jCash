@@ -3,9 +3,11 @@ package com.diagnoses.web;
 import com.diagnoses.model.DiagnosesEmptity;
 import com.diagnoses.model.DoctorsEntity;
 import com.diagnoses.model.PacientsEntity;
+import com.diagnoses.model.VisitsEntity;
 import com.diagnoses.service.DiagnosesService;
 import com.diagnoses.service.DoctorsService;
 import com.diagnoses.service.PacientsService;
+import com.diagnoses.service.VisitsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,10 +19,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Controller
-public class DoctorsController {
+public class SpringController {
     private DoctorsService doctorsService;
     private PacientsService pacientsService;
     private DiagnosesService diagnosesService;
+    private VisitsService visitsService;
 
     @Autowired(required = true)
     public void setDiagnosesService(DiagnosesService diagnosesService) {
@@ -49,6 +52,13 @@ public class DoctorsController {
         List<PacientsEntity> list = pacientsService.getAllPacients();
         model.addAttribute("pacients", list);
         return "pacients";
+    }
+
+    @RequestMapping(value = "visits", method = RequestMethod.GET)
+    public String listVisits(Model model){
+        List<VisitsEntity> list = visitsService.getAllVisits();
+        model.addAttribute("visits", list);
+        return "visits";
     }
 
 
