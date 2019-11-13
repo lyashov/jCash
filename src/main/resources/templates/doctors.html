@@ -18,25 +18,36 @@
 
 
 </main>
+<div class="container">
+    <div class="col-sm-4">
+        <button type="button" class="btn btn-success">Receipt of money</button>
 
-    <table class="table table-striped">
-        <tr>
-            <th width="80">ID</th>
-            <th width="120">Имя</th>
-            <th width="120">Отчество</th>
-            <th width="120">Фамилия</th>
-            <th width="60">Логин</th>
-            <th width="60">Почта</th>
-        </tr>
-        <tr th:each="doctor: ${doctors}">
-            <td scope="col" th:text="${doctor.getId()}"/>
-            <td scope="col" th:text="${doctor.getFirstName()}"/>
-            <td scope="col" th:text="${doctor.getSecondName()}"/>
-            <td scope="col" th:text="${doctor.getLastName()}"/>
-            <td scope="col" th:text="${doctor.getLogin()}"/>
-            <td scope="col" th:text="${doctor.getEmail()}"/>
-        </tr>
-    </table>
+             <table class="table table-striped">
+                    <tr>
+                      <th width="80">ID</th>
+                      <th width="120">Имя</th>
+                       <th width="120">Отчество</th>
+                        <th width="120">Фамилия</th>
+                        <th width="60">Логин</th>
+                        <th width="60">Почта</th>
+                    </tr>
+                    <tr th:each="doctor: ${doctors}">
+                       <td scope="col" th:text="${doctor.getId()}"/>
+                        <td scope="col" th:text="${doctor.getFirstName()}"/>
+                        <td scope="col" th:text="${doctor.getSecondName()}"/>
+                       <td scope="col" th:text="${doctor.getLastName()}"/>
+                       <td scope="col" th:text="${doctor.getLogin()}"/>
+                     <td scope="col" th:text="${doctor.getEmail()}"/>
+                   </tr>
+              </table>
+    </div>
 
+    <div class="col-sm-4">
+        <button type="button" class="btn btn-danger">Spending of money</button>
+    </div>
+
+
+
+</div>
 </body>
 </html>
