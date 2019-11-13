@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/unnamed.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/DiagnosesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/PacientsRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/VisitsRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/exception/RecordNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/exception/RecordNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/model/OperationsEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/model/TypeOperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/DiagnosesEmptity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/DoctorsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/repository/TypeOperatorRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/DoctorsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/service/TypeOperatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/TypeOperatorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/DoctorsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/web/TypeOperationsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/TypeOperationsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycash/web/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/DoctorsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/doctors.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +150,7 @@
       <workItem from="1573020770510" duration="1292000" />
       <workItem from="1573057661204" duration="1175000" />
       <workItem from="1573406594669" duration="7098000" />
-      <workItem from="1573476895050" duration="17411000" />
+      <workItem from="1573476895050" duration="17762000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -275,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572978151619</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="templates add">
+      <created>1573644255688</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573644255689</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
