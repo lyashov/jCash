@@ -19,7 +19,7 @@
 
 </main>
 
-    <table class="tg">
+    <table class="table table-striped">
         <tr>
             <th width="80">ID</th>
             <th width="120">Имя</th>
@@ -29,12 +29,12 @@
             <th width="60">Почта</th>
         </tr>
         <tr th:each="doctor: ${doctors}">
-            <td th:text="${doctor.getId()}"/>
-            <td th:text="${doctor.getFirstName()}"/>
-            <td th:text="${doctor.getSecondName()}"/>
-            <td th:text="${doctor.getLastName()}"/>
-            <td th:text="${doctor.getLogin()}"/>
-            <td th:text="${doctor.getEmail()}"/>
+            <td scope="col" th:text="${doctor.getId()}"/>
+            <td scope="col" th:text="${doctor.getFirstName()}"/>
+            <td scope="col" th:text="${doctor.getSecondName()}"/>
+            <td scope="col" th:text="${doctor.getLastName()}"/>
+            <td scope="col" th:text="${doctor.getLogin()}"/>
+            <td scope="col" th:text="${doctor.getEmail()}"/>
         </tr>
     </table>
 
