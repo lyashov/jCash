@@ -2,11 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/visits.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/UsersEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/DoctorsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pacients.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pacients.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/VisitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/VisitRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visits.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visits.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +54,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../homework/12_2 EJB" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -51,20 +62,21 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work\Innopolis\myCash_2\src\main\resources\templates" />
-      <recent name="D:\work\Innopolis\myCash_2\src\main\resources" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.diagnoses.service" />
-      <recent name="com.diagnoses.web" />
-      <recent name="com.diagnoses.repository" />
-      <recent name="com.diagnoses.model" />
-      <recent name="com.mycash.model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\work\Innopolis\myCash_2\src\main\resources\templates\frgments" />
       <recent name="D:\work\Innopolis\myCash_2\src\main\resources\templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.diagnoses.service" />
+      <recent name="com.diagnoses.repository" />
+      <recent name="com.diagnoses.model" />
+      <recent name="com.diagnoses.web" />
+      <recent name="com.mycash.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\Innopolis\myCash_2\src\main\resources\templates" />
+      <recent name="D:\work\Innopolis\myCash_2\src\main\java\com\diagnoses\configs" />
+      <recent name="D:\work\Innopolis\myCash_2\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -165,7 +177,10 @@
       <workItem from="1573020770510" duration="1292000" />
       <workItem from="1573057661204" duration="1175000" />
       <workItem from="1573406594669" duration="7098000" />
-      <workItem from="1573476895050" duration="39677000" />
+      <workItem from="1573476895050" duration="45486000" />
+      <workItem from="1573822962411" duration="623000" />
+      <workItem from="1574005994844" duration="3673000" />
+      <workItem from="1574063634212" duration="8796000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -370,7 +385,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573669066011</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="templates add">
+      <created>1573676999226</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1573676999226</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,9 +433,14 @@
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitService.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java</url>
           <line>48</line>
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,10 +1,10 @@
 package com.diagnoses.service;
 
 import com.diagnoses.exception.RecordNotFoundException;
-import com.diagnoses.model.DiagnosesEmptity;
+import com.diagnoses.model.PacientsEntity;
 import com.diagnoses.model.VisitsEntity;
-import com.diagnoses.repository.DiagnosesRepository;
-import com.diagnoses.repository.VisitsRepository;
+import com.diagnoses.repository.PacientsRepository;
+import com.diagnoses.repository.VisitRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +13,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class VisitsService {
+public class VisitService {
      
     @Autowired
-    VisitsRepository repository;
+    VisitRepository repository;
 
 
    /* EntityManager entityManager;
@@ -33,10 +33,10 @@ public class VisitsService {
 
     public List<VisitsEntity> getAllVisits()
     {
-        List<VisitsEntity> visitsList = repository.findAll();
+        List<VisitsEntity> pvisitsList = repository.findAll();
 
-        if(visitsList.size() > 0) {
-            return visitsList;
+        if(pvisitsList.size() > 0) {
+            return pvisitsList;
         } else {
             return new ArrayList<VisitsEntity>();
         }
@@ -53,19 +53,14 @@ public class VisitsService {
         }
     }
 
- /*  public DiagnosesEmptity\ createOrUpdateDocor(DiagnosesRepository entity) throws RecordNotFoundException
+    public VisitsEntity createOrUpdateVisit(VisitsEntity entity) throws RecordNotFoundException
     {
-        Optional<DiagnosesEmptity> diagnose = repository.findById(entity.getId());
+        Optional<VisitsEntity> visit = repository.findById(entity.getId());
 
-        if(pacient.isPresent())
+        if(visit.isPresent())
         {
-            PacientsEntity newEntity = pacient.get();
-            newEntity.setFirstName(entity.getFirstName());
-            newEntity.setSecondName(entity.getLastName());
-            newEntity.setLastName(entity.getLastName());
-            newEntity.setLogin(entity.getLastName());
-            newEntity.setPassword(entity.getEmail());
-            newEntity.setEmail(entity.getEmail());
+            VisitsEntity newEntity = visit.get();
+            newEntity.setId(entity.getId());
 
             newEntity = repository.save(newEntity);
 
@@ -77,15 +72,15 @@ public class VisitsService {
         }
     }
 
-    public void deleteDocdorById(Long id) throws RecordNotFoundException
+    public void deleteVisitById(Long id) throws RecordNotFoundException
     {
-        Optional<PacientsEntity> pacient = repository.findById(id);
+        Optional<VisitsEntity> visit = repository.findById(id);
          
-        if(pacient.isPresent())
+        if(visit.isPresent())
         {
             repository.deleteById(id);
         } else {
             throw new RecordNotFoundException("No doctor record exist for given id");
         }
-    }*/
+    }
 }

@@ -9,7 +9,13 @@
                 <li><a href="/doctors">Врачи</a></li>
                 <li><a href="/pacients">Пациенты</a></li>
                 <li><a href="#">О программе...</a></li>
+                <li><form th:action="@{/logout}" method="post">
+                    <input type="submit" value="Sign Out"/>
+                </form></li>
+                </li>
             </ul>
         </div>
     </nav>
+
 </navbar>
+

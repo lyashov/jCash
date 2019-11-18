@@ -1,13 +1,13 @@
 package com.diagnoses.web;
 
-import com.diagnoses.model.DiagnosesEmptity;
+import com.diagnoses.exception.RecordNotFoundException;
 import com.diagnoses.model.DoctorsEntity;
 import com.diagnoses.model.PacientsEntity;
 import com.diagnoses.model.VisitsEntity;
 import com.diagnoses.service.DiagnosesService;
 import com.diagnoses.service.DoctorsService;
 import com.diagnoses.service.PacientsService;
-import com.diagnoses.service.VisitsService;
+import com.diagnoses.service.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,7 +23,9 @@ public class SpringController {
     private DoctorsService doctorsService;
     private PacientsService pacientsService;
     private DiagnosesService diagnosesService;
-    private VisitsService visitsService;
+    private VisitService visitsService;
+
+
 
     @Autowired(required = true)
     public void setDiagnosesService(DiagnosesService diagnosesService) {
@@ -55,12 +57,17 @@ public class SpringController {
     }
 
     @RequestMapping(value = "visits", method = RequestMethod.GET)
-    public String listVisits(Model model){
+    public String listVisits(Model model) {
         List<VisitsEntity> list = visitsService.getAllVisits();
-        model.addAttribute("visits", list);
+        model.addAttribute("vis", list);
         return "visits";
     }
 
+    @GetMapping("/login")
+    public String login(@RequestParam(name="name", required=false, defaultValue="Username") String name, Model model) {
+        model.addAttribute("name", name);
+        return "login";
+    }
 
     @GetMapping("/")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="Username") String name, Model model) {

@@ -15,16 +15,16 @@ public class PacientsEntity {
 
 
    // @JoinColumn(name = "id_pacient", referencedColumnName = "id")
-    @OneToMany
-    private Set<VisitsEntity> visits;
-
-    public String getVisits() {
-        return visits.toArray().toString();
-    }
-
-    public void setVisits(Set<VisitsEntity> visits) {
-        this.visits = visits;
-    }
+//    @OneToMany
+//    private Set<VisitsEntity> visits;
+//
+//    public String getVisits() {
+//        return visits.toArray().toString();
+//    }
+//
+//    public void setVisits(Set<VisitsEntity> visits) {
+//        this.visits = visits;
+//    }
 
     @Column(name="first_name", nullable=false, length=200)
     private String firstName;

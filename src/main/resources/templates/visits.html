@@ -19,21 +19,7 @@
 
 </main>
 
-    <table class="tg">
-        <tr>
-            <th width="80">ID</th>
-            <th width="120">Дата</th>
-            <th width="120">ИД Доктор</th>
-            <th width="120">Пациент</th>
 
-        </tr>
-        <tr th:each="visit: ${visits}">
-            <td th:text="${visit.getId()}"/>
-            <td th:text="${visit.getDate_visit()}"/>
-            <td th:text="${visit.getId_doctor()}"/>
-            <td th:text="${visit.getPacient()}"/>
-        </tr>
-    </table>
 
 </body>
 </html>
