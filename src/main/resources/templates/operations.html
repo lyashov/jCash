@@ -22,22 +22,20 @@
     <table class="tg">
         <tr>
             <th width="80">ID</th>
-            <th width="120">Имя</th>
-            <th width="120">Отчество</th>
-            <th width="120">Фамилия</th>
-            <th width="60">Логин</th>
-            <th width="60">Почта</th>
+            <th width="120">Карта/Нал</th>
+            <th width="120">Дебит/Кредит</th>
+            <th width="120">ид типа операции</th>
+            <th width="60">Сумма</th>
+            <th width="60">Юзер ид</th>
 
         </tr>
-        <tr th:each="pacient: ${pacients}">
-            <td th:text="${pacient.getId()}"/>
-            <td th:text="${pacient.getFirstName()}"/>
-            <td th:text="${pacient.getSecondName()}"/>
-            <td th:text="${pacient.getLastName()}"/>
-            <td th:text="${pacient.getLogin()}"/>
-            <td th:text="${pacient.getEmail()}"/>
-            <span th:each="producttbl: ${pacients}"> <span th:text="${producttbl}" /></span>
-
+        <tr th:each="operation: ${operations}">
+            <td th:text="${operation.getId()}"/>
+            <td th:text="${operation.getCard_cash()}"/>
+            <td th:text="${operation.getDebit_credit()}"/>
+            <td th:text="${operation.getId_type_operation()}"/>
+            <td th:text="${operation.getSum()}"/>
+            <td th:text="${operation.getId_user()}"/>
 
         </tr>
     </table>

@@ -1,13 +1,11 @@
 package com.diagnoses.web;
 
-import com.diagnoses.exception.RecordNotFoundException;
-import com.diagnoses.model.DoctorsEntity;
-import com.diagnoses.model.PacientsEntity;
-import com.diagnoses.model.VisitsEntity;
-import com.diagnoses.service.DiagnosesService;
-import com.diagnoses.service.DoctorsService;
-import com.diagnoses.service.PacientsService;
-import com.diagnoses.service.VisitService;
+import com.diagnoses.model.TypeOperationsEntity;
+import com.diagnoses.model.OperationsEntity;
+import com.diagnoses.model.UsersEntity;
+import com.diagnoses.service.OperationsService;
+import com.diagnoses.service.UsersService;
+import com.diagnoses.service.TypeOperationsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,47 +18,45 @@ import java.util.List;
 
 @Controller
 public class SpringController {
-    private DoctorsService doctorsService;
-    private PacientsService pacientsService;
-    private DiagnosesService diagnosesService;
-    private VisitService visitsService;
-
-
+    private UsersService usersService;
+    private TypeOperationsService typeOperationsService;
+    private OperationsService operationsService;
 
     @Autowired(required = true)
-    public void setDiagnosesService(DiagnosesService diagnosesService) {
-        this.diagnosesService = diagnosesService;
+    public void setUsersService(UsersService usersService) {
+        this.usersService = usersService;
     }
 
     @Autowired(required = true)
-    public void setdoctorsService(DoctorsService doctorsService) {
-        this.doctorsService = doctorsService;
-    }
-
-    @RequestMapping(value = "doctors", method = RequestMethod.GET)
-    public String listDoctors(Model model){
-        List<DoctorsEntity> list = doctorsService.getAllDoctors();
-        model.addAttribute("doctors", list);
-        return "doctors";
+    public void setTypeOperationsService(TypeOperationsService typeOperationsService) {
+        this.typeOperationsService = typeOperationsService;
     }
 
     @Autowired(required = true)
-    public void setPacientsService(PacientsService pacientsService) {
-        this.pacientsService = pacientsService;
+    public void setOperationsService(OperationsService operationsService) {
+        this.operationsService = operationsService;
     }
 
-    @RequestMapping(value = "pacients", method = RequestMethod.GET)
-    public String listPacients(Model model){
-        List<PacientsEntity> list = pacientsService.getAllPacients();
-        model.addAttribute("pacients", list);
-        return "pacients";
+
+    @RequestMapping(value = "/users", method = RequestMethod.GET)
+    public String listUsers(Model model){
+        List<UsersEntity> list = usersService.getAllUsers();
+        model.addAttribute("users", list);
+        return "users";
     }
 
-    @RequestMapping(value = "visits", method = RequestMethod.GET)
-    public String listVisits(Model model) {
-        List<VisitsEntity> list = visitsService.getAllVisits();
-        model.addAttribute("vis", list);
-        return "visits";
+    @RequestMapping(value = "/operations", method = RequestMethod.GET)
+    public String listOperations(Model model){
+        List<OperationsEntity> list = operationsService.getAllOperations();
+        model.addAttribute("operations", list);
+        return "operations";
+    }
+
+    @RequestMapping(value = "/typeoperations", method = RequestMethod.GET)
+    public String listTypeOperations(Model model) {
+        List<TypeOperationsEntity> list = typeOperationsService.getAllTypeOperations();
+        model.addAttribute("typeoperations", list);
+        return "typeoperations";
     }
 
     @GetMapping("/login")

@@ -1,8 +1,9 @@
 package com.diagnoses.service;
 
 import com.diagnoses.exception.RecordNotFoundException;
-import com.diagnoses.model.DoctorsEntity;
-import com.diagnoses.repository.DoctorsRepository;
+import com.diagnoses.model.OperationsEntity;
+import com.diagnoses.model.TypeOperationsEntity;
+import com.diagnoses.repository.TypeOperationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +12,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DoctorsService {
+public class TypeOperationsService {
      
     @Autowired
-    DoctorsRepository repository;
+    TypeOperationsRepository repository;
 
 
    /* EntityManager entityManager;
@@ -29,35 +30,35 @@ public class DoctorsService {
         }
     }*/
 
-    public List<DoctorsEntity> getAllDoctors()
+    public List<TypeOperationsEntity> getAllTypeOperations()
     {
-        List<DoctorsEntity> doctorsList = repository.findAll();
+        List<TypeOperationsEntity> pacientsList = repository.findAll();
 
-        if(doctorsList.size() > 0) {
-            return doctorsList;
+        if(pacientsList.size() > 0) {
+            return pacientsList;
         } else {
-            return new ArrayList<DoctorsEntity>();
+            return new ArrayList<TypeOperationsEntity>();
         }
     }
 
-    public DoctorsEntity getDoctorById(Long id) throws RecordNotFoundException
+    public TypeOperationsEntity getDoctorById(Long id) throws RecordNotFoundException
     {
-        Optional<DoctorsEntity> doctor = repository.findById(id);
+        Optional<TypeOperationsEntity> TypeOperations = repository.findById(id);
 
-        if(doctor.isPresent()) {
-            return doctor.get();
+        if(TypeOperations.isPresent()) {
+            return TypeOperations.get();
         } else {
             throw new RecordNotFoundException("No doctor record exist for given id");
         }
     }
 
-    public DoctorsEntity createOrUpdateDocor(DoctorsEntity entity) throws RecordNotFoundException
+   /* public OperationsEntity createOrUpdateDocor(OperationsEntity entity) throws RecordNotFoundException
     {
-        Optional<DoctorsEntity> doctor = repository.findById(entity.getId());
+        Optional<TypeOperationsEntity> pacient = repository.findById(entity.getId());
 
-        if(doctor.isPresent())
+        if(pacient.isPresent())
         {
-            DoctorsEntity newEntity = doctor.get();
+            OperationsEntity newEntity = pacient.get();
             newEntity.setFirstName(entity.getFirstName());
             newEntity.setSecondName(entity.getLastName());
             newEntity.setLastName(entity.getLastName());
@@ -74,12 +75,12 @@ public class DoctorsService {
             return entity;
         }
     }
-
-    public void deleteDocdorById(Long id) throws RecordNotFoundException
+*/
+    public void deleteTypeOperationById(Long id) throws RecordNotFoundException
     {
-        Optional<DoctorsEntity> doctor = repository.findById(id);
+        Optional<TypeOperationsEntity> pacient = repository.findById(id);
          
-        if(doctor.isPresent())
+        if(pacient.isPresent())
         {
             repository.deleteById(id);
         } else {

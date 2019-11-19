@@ -26,18 +26,12 @@
                     <tr>
                       <th width="80">ID</th>
                       <th width="120">Имя</th>
-                       <th width="120">Отчество</th>
-                        <th width="120">Фамилия</th>
-                        <th width="60">Логин</th>
-                        <th width="60">Почта</th>
+                       <th width="120">Логин</th>
                     </tr>
-                    <tr th:each="doctor: ${doctors}">
-                       <td scope="col" th:text="${doctor.getId()}"/>
-                        <td scope="col" th:text="${doctor.getFirstName()}"/>
-                        <td scope="col" th:text="${doctor.getSecondName()}"/>
-                       <td scope="col" th:text="${doctor.getLastName()}"/>
-                       <td scope="col" th:text="${doctor.getLogin()}"/>
-                     <td scope="col" th:text="${doctor.getEmail()}"/>
+                    <tr th:each="user: ${users}">
+                       <td scope="col" th:text="${user.getId()}"/>
+                        <td scope="col" th:text="${user.getUsername()}"/>
+                        <td scope="col" th:text="${user.getLogin()}"/>
                    </tr>
               </table>
     </div>

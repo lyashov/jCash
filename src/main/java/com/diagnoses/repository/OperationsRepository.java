@@ -1,11 +1,12 @@
 package com.diagnoses.repository;
 
-import com.diagnoses.model.VisitsEntity;
+
+import com.diagnoses.model.OperationsEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface VisitRepository
-        extends JpaRepository<VisitsEntity, Long> {
+public interface OperationsRepository
+        extends JpaRepository<OperationsEntity, Long> {
 
 }

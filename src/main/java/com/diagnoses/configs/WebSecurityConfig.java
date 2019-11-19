@@ -22,6 +22,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private DataSource dataSource;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        // .anyRequest().hasRole("admin")
         http
                 .authorizeRequests()
                 .antMatchers("/", "/index").permitAll()

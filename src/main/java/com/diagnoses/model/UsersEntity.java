@@ -14,7 +14,7 @@ public class UsersEntity {
     private Long id;
 
     @Column(name="username", nullable=false, length=200)
-    private String lastName;
+    private String username;
 
     @Column(name="login", nullable=true, length=150)
     private String login;
@@ -22,17 +22,14 @@ public class UsersEntity {
     @Column(name="password", nullable=true, length=100)
     private String password;
 
-    @Column(name="active", nullable=false)
-    private Integer active;
-
     @Column(name="email", nullable=false, length=100)
     private String email;
 
-    @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+  /*  @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
-
+*/
     public Long getId() {
         return id;
     }
@@ -41,12 +38,12 @@ public class UsersEntity {
         this.id = id;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getLogin() {
@@ -65,14 +62,6 @@ public class UsersEntity {
         this.password = password;
     }
 
-    public Integer getActive() {
-        return active;
-    }
-
-    public void setActive(Integer active) {
-        this.active = active;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -81,11 +70,5 @@ public class UsersEntity {
         this.email = email;
     }
 
-    public Set<Role> getRoles() {
-        return roles;
-    }
 
-    public void setRoles(Set<Role> roles) {
-        this.roles = roles;
-    }
 }

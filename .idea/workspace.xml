@@ -2,22 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/MvcConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/UsersEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/TypeOperationsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/VisitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/VisitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/MvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/DiagnosesEmptity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/DoctorsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/PacientsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/OperationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/UsersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/VisitsEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/DiagnosesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/OperationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/DoctorsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/TypeOperationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/PacientsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/VisitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/UsersRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/DiagnosesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/OperationsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/DoctorsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/UsersService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/PacientsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/TypeOperationsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/doctors.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visits.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/visits.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pacients.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/operations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/type.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/typeoperations.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/visits.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +187,7 @@
       <workItem from="1573476895050" duration="45486000" />
       <workItem from="1573822962411" duration="623000" />
       <workItem from="1574005994844" duration="3673000" />
-      <workItem from="1574063634212" duration="8796000" />
+      <workItem from="1574063634212" duration="18892000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -392,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573676999226</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add first security">
+      <created>1574082295458</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574082295458</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,25 +436,21 @@
     <MESSAGE value="users add3" />
     <MESSAGE value="users add4" />
     <MESSAGE value="templates add" />
-    <option name="LAST_COMMIT_MESSAGE" value="templates add" />
+    <MESSAGE value="add first security" />
+    <option name="LAST_COMMIT_MESSAGE" value="add first security" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/service/DiagnosesService.java</url>
-          <line>35</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/service/OperationsService.java</url>
+          <line>32</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/service/VisitService.java</url>
-          <line>35</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="11" />
+          <line>42</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

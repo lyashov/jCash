@@ -1,12 +1,12 @@
 package com.diagnoses.repository;
 
 
-import com.diagnoses.model.DiagnosesEmptity;
+import com.diagnoses.model.TypeOperationsEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DiagnosesRepository
-        extends JpaRepository<DiagnosesEmptity, Long> {
+public interface TypeOperationsRepository
+        extends JpaRepository<TypeOperationsEntity, Long> {
 
 }

@@ -1,10 +1,8 @@
 package com.diagnoses.service;
 
 import com.diagnoses.exception.RecordNotFoundException;
-import com.diagnoses.model.DiagnosesEmptity;
-import com.diagnoses.model.PacientsEntity;
-import com.diagnoses.repository.DiagnosesRepository;
-import com.diagnoses.repository.PacientsRepository;
+import com.diagnoses.model.OperationsEntity;
+import com.diagnoses.repository.OperationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +11,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class DiagnosesService {
+public class OperationsService {
      
     @Autowired
-    DiagnosesRepository repository;
+    OperationsRepository repository;
 
 
    /* EntityManager entityManager;
@@ -31,23 +29,23 @@ public class DiagnosesService {
         }
     }*/
 
-    public List<DiagnosesEmptity> getAllDiagnoses()
+    public List<OperationsEntity> getAllOperations()
     {
-        List<DiagnosesEmptity> diagnosesList = repository.findAll();
+        List<OperationsEntity> OperationsList = repository.findAll();
 
-        if(diagnosesList.size() > 0) {
-            return diagnosesList;
+        if(OperationsList.size() > 0) {
+            return OperationsList;
         } else {
-            return new ArrayList<DiagnosesEmptity>();
+            return new ArrayList<OperationsEntity>();
         }
     }
 
-    public DiagnosesEmptity getDiagnoseById(Long id) throws RecordNotFoundException
+    public OperationsEntity getDiagnoseById(Long id) throws RecordNotFoundException
     {
-        Optional<DiagnosesEmptity> diagnose = repository.findById(id);
+        Optional<OperationsEntity> operation = repository.findById(id);
 
-        if(diagnose.isPresent()) {
-            return diagnose.get();
+        if(operation.isPresent()) {
+            return operation.get();
         } else {
             throw new RecordNotFoundException("No doctor record exist for given id");
         }

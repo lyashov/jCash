@@ -18,10 +18,10 @@
             <th width="80">ID</th>
             <th width="120">Type operation</th>
         </tr>
-        <tr th:each="t: ${type}">
+        <tr th:each="t: ${typeoperations}">
             <td th:text="${t.getId()}"/>
-            <h3> [[${t.getName()}]]</h3>
-            <td th:text="${t.getName()}"/>
+            <td th:text="${t.getOperation()}"/>
+            <td th:text="${t.getOperation()}"/>
         </tr>
     </table>
 </div>
