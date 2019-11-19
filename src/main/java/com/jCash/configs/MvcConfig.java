@@ -1,4 +1,4 @@
-package com.diagnoses.configs;
+package com.jCash.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -11,6 +11,7 @@ public class MvcConfig implements WebMvcConfigurer {
         registry.addViewController("/index").setViewName("index");
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/login").setViewName("login");
+        registry.addViewController("/registration").setViewName("registration");
         registry.addViewController("/users").setViewName("users");
         registry.addViewController("/operations").setViewName("operations");
         registry.addViewController("/typeoperations").setViewName("typeoperations");

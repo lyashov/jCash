@@ -1,4 +1,4 @@
-package com.diagnoses.model;
+package com.jCash.model;
 
 
 import javax.persistence.*;
@@ -39,5 +39,10 @@ public class TypeOperationsEntity {
 
     public void setOperation(String operation) {
         this.operation = operation;
+    }
+
+    @Override
+    public String toString() {
+        return getOperation();
     }
 }

@@ -1,4 +1,4 @@
-package com.diagnoses;
+package com.jCash;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

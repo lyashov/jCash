@@ -1,9 +1,8 @@
-package com.diagnoses.service;
+package com.jCash.service;
 
-import com.diagnoses.exception.RecordNotFoundException;
-import com.diagnoses.model.OperationsEntity;
-import com.diagnoses.model.TypeOperationsEntity;
-import com.diagnoses.repository.TypeOperationsRepository;
+import com.jCash.exception.RecordNotFoundException;
+import com.jCash.model.TypeOperationsEntity;
+import com.jCash.repository.TypeOperationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

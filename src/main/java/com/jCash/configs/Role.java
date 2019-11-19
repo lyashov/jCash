@@ -1,4 +1,4 @@
-package com.diagnoses.configs;
+package com.jCash.configs;
 
 public enum  Role {
     USER;

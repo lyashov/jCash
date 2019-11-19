@@ -1,9 +1,8 @@
-package com.diagnoses.model;
+package com.jCash.model;
 
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.Set;
 
 @Entity
 @Table(name="OPERATIONS")
@@ -13,14 +12,19 @@ public class OperationsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name="data_operation", nullable=false)
+    private Date data_operation;
+
+    @ManyToOne (optional=false)
+    @JoinColumn (name="id_user",referencedColumnName="id")
+    private UsersEntity user;
+
     @Column(name="debit_credit", nullable=false)
     private Integer debit_credit;
 
-    @Column(name="id_user", nullable=false)
-    private Long id_user;
-
-    @Column(name="id_type_operation", nullable=false)
-    private Long id_type_operation;
+    @ManyToOne (optional=false)
+    @JoinColumn (name="id_type_operation",referencedColumnName="id")
+    private TypeOperationsEntity typeOperation;
 
     @Column(name="card_cash ", nullable=false)
     private Long card_cash;
@@ -31,18 +35,13 @@ public class OperationsEntity {
     @Column(name="comment", nullable=false, length=200)
     private String comment;
 
-   // @JoinColumn(name = "id_pacient", referencedColumnName = "id")
-//    @OneToMany
-//    private Set<VisitsEntity> visits;
-//
-//    public String getVisits() {
-//        return visits.toArray().toString();
-//    }
-//
-//    public void setVisits(Set<VisitsEntity> visits) {
-//        this.visits = visits;
-//    }
+    public UsersEntity getUser() {
+        return user;
+    }
 
+    public void setUser(UsersEntity user) {
+        this.user = user;
+    }
 
     public Long getId() {
         return id;
@@ -52,28 +51,28 @@ public class OperationsEntity {
         this.id = id;
     }
 
+    public Date getData_operation() {
+        return data_operation;
+    }
+
+    public void setData_operation(Date data_operation) {
+        this.data_operation = data_operation;
+    }
+
     public Integer getDebit_credit() {
         return debit_credit;
-    }
-
-    public Long getId_user() {
-        return id_user;
-    }
-
-    public void setId_user(Long id_user) {
-        this.id_user = id_user;
     }
 
     public void setDebit_credit(Integer debit_credit) {
         this.debit_credit = debit_credit;
     }
 
-    public Long getId_type_operation() {
-        return id_type_operation;
+    public TypeOperationsEntity getTypeOperation() {
+        return typeOperation;
     }
 
-    public void setId_type_operation(Long id_type_operation) {
-        this.id_type_operation = id_type_operation;
+    public void setTypeOperation(TypeOperationsEntity typeOperation) {
+        this.typeOperation = typeOperation;
     }
 
     public Long getCard_cash() {

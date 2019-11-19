@@ -1,12 +1,10 @@
-package com.diagnoses.model;
+package com.jCash.model;
 
-import com.diagnoses.configs.Role;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity
-@Table(name="USERS")
+@Table(name="USR")
 public class UsersEntity {
 
     @Id
@@ -15,6 +13,14 @@ public class UsersEntity {
 
     @Column(name="username", nullable=false, length=200)
     private String username;
+
+   // @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
+   // @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
+  //  @Enumerated(EnumType.STRING)
+  //  private Set<Role> roles;
+
+    @Column(name="active", nullable=false)
+    private Boolean active;
 
     @Column(name="login", nullable=true, length=150)
     private String login;
@@ -25,11 +31,6 @@ public class UsersEntity {
     @Column(name="email", nullable=false, length=100)
     private String email;
 
-  /*  @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
-    @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
-    @Enumerated(EnumType.STRING)
-    private Set<Role> roles;
-*/
     public Long getId() {
         return id;
     }
@@ -44,6 +45,14 @@ public class UsersEntity {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 
     public String getLogin() {
@@ -70,5 +79,8 @@ public class UsersEntity {
         this.email = email;
     }
 
-
+    @Override
+    public String toString() {
+        return username + " (" + login + ")";
+    }
 }

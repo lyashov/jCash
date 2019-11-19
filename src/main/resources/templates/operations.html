@@ -19,24 +19,25 @@
 
 </main>
 
-    <table class="tg">
+    <table class="table table-striped">
         <tr>
             <th width="80">ID</th>
+            <th width="80">Дата операции</th>
             <th width="120">Карта/Нал</th>
             <th width="120">Дебит/Кредит</th>
-            <th width="120">ид типа операции</th>
+            <th width="120">Типа операции</th>
             <th width="60">Сумма</th>
-            <th width="60">Юзер ид</th>
+            <th width="60">Юзер</th>
 
         </tr>
         <tr th:each="operation: ${operations}">
             <td th:text="${operation.getId()}"/>
+            <td th:text="${operation.getData_operation()}"/>
             <td th:text="${operation.getCard_cash()}"/>
             <td th:text="${operation.getDebit_credit()}"/>
-            <td th:text="${operation.getId_type_operation()}"/>
+            <td th:text="${operation.getTypeOperation()}"/>
             <td th:text="${operation.getSum()}"/>
-            <td th:text="${operation.getId_user()}"/>
-
+            <td th:text="${operation.getUser()}"/>
         </tr>
     </table>
 

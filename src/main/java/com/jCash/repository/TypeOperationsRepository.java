@@ -1,7 +1,7 @@
-package com.diagnoses.repository;
+package com.jCash.repository;
 
 
-import com.diagnoses.model.TypeOperationsEntity;
+import com.jCash.model.TypeOperationsEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
