@@ -62,7 +62,7 @@ public class MainController {
     @GetMapping("/")
     public String greeting(@RequestParam(name="name", required=false, defaultValue="Username") String name, Model model) {
         model.addAttribute("name", name);
-        return "index";
+        return "operations";
     }
 
 }
