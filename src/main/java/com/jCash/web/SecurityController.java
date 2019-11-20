@@ -30,7 +30,7 @@ public class SecurityController {
      //   if(userFromDB != null){
            // model.
      //   }
-        return "registration";
+        return "registration3";
     }
 
     @PostMapping("/registration")
@@ -39,7 +39,7 @@ public class SecurityController {
         UsersEntity usr = usersRepo.findByUsername("Vasua");
         if(usr != null){
             model.addAttribute("message", "User exists!");
-            return "registration";
+            return "registration3";
         }
      //   usr.setActive(true);
      //   usr.setRoles(Collections.singleton(Role.USER));

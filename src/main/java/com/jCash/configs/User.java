@@ -4,11 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.annotation.Id;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
-
+@Slf4j
+@Data
 public class User implements UserDetails {
     public Long id;
     public String username;
