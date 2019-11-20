@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="jcash">
+    <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/UsersService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +49,7 @@
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Repositories/SpringHibernateCRUD" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -170,7 +174,7 @@
       <workItem from="1573822962411" duration="623000" />
       <workItem from="1574005994844" duration="3673000" />
       <workItem from="1574063634212" duration="36579000" />
-      <workItem from="1574168191662" duration="16408000" />
+      <workItem from="1574168191662" duration="30650000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -403,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574170205819</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="auth">
+      <created>1574245262114</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1574245262115</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +446,8 @@
     <MESSAGE value="templates add" />
     <MESSAGE value="add first security" />
     <MESSAGE value="jcash" />
-    <option name="LAST_COMMIT_MESSAGE" value="jcash" />
+    <MESSAGE value="auth" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -451,9 +463,9 @@
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="21" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/jCash/configs/UserService.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

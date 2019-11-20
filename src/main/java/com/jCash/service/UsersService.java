@@ -52,6 +52,17 @@ public class UsersService {
         }
     }
 
+    public UsersEntity getUserByName(String username) throws RecordNotFoundException
+    {
+        Optional<UsersEntity> user = Optional.ofNullable(repository.findByUsername(username));
+
+        if(user.isPresent()) {
+            return user.get();
+        } else {
+            throw new RecordNotFoundException("No doctor record exist for given id");
+        }
+    }
+
 
   /*  public TypeOperationsEntity createOrUpdateDocor(TypeOperationsEntity entity) throws RecordNotFoundException
     {

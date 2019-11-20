@@ -59,8 +59,8 @@ public class OperationsEntity {
         this.data_operation = data_operation;
     }
 
-    public Integer getDebit_credit() {
-        return debit_credit;
+    public String getDebit_credit() {
+        return (debit_credit == 0) ? "Приход" : "Расход";
     }
 
     public void setDebit_credit(Integer debit_credit) {
@@ -75,8 +75,8 @@ public class OperationsEntity {
         this.typeOperation = typeOperation;
     }
 
-    public Long getCard_cash() {
-        return card_cash;
+    public String getCard_cash() {
+        return (card_cash == 0) ? "Наличными" : "Картой";
     }
 
     public void setCard_cash(Long card_cash) {
