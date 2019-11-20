@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/RestMyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/SecurityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/exception/RecordNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/exception/RecordNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/OperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/TypeOperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/TypeOperationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/OperationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/repository/OperationsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/TypeOperationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/repository/TypeOperationsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/repository/UsersRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/OperationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/OperationsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/TypeOperationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/TypeOperationsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/service/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diagnoses/web/SpringController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/operations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/operations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/typeoperations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/typeoperations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/Role.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,6 +169,7 @@
       <workItem from="1574005994844" duration="3673000" />
       <workItem from="1574063634212" duration="36579000" />
       <workItem from="1574168191662" duration="1812000" />
+      <workItem from="1574238218488" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
