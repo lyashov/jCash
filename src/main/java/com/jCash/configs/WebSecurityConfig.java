@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.annotation.web.configurers.LogoutConfigurer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -24,18 +25,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // .anyRequest().hasRole("admin")
         http
                 .authorizeRequests()
-                .antMatchers("/", "/index").permitAll()
+              //  .antMatchers("/", "/index").permitAll()
                 .antMatchers("/registration", "/registration").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/login")
+                //.loginPage("/login")
                 .permitAll()
                 .and()
                 .logout()
                 .permitAll();
     }
 
+
+    /*@Bean
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication().withUser("user").password("password").roles("USER");
+    }*/
 
     @Bean
     @Override
@@ -58,5 +65,5 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .passwordEncoder(NoOpPasswordEncoder.getInstance())
                 .usersByUsernameQuery("select username, password, active from usr where username=?")
                 .authoritiesByUsernameQuery("select u.username, ur.roles from usr u inner join user_role ur on u.id = ur.user_id where u.username=?");        //super.configure(auth);
-    }*/
+*/
 }
