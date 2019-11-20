@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/men.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/MvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/web/SecurityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/SecurityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration3.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +174,7 @@
       <workItem from="1574063634212" duration="36579000" />
       <workItem from="1574168191662" duration="36989000" />
       <workItem from="1574273660006" duration="58000" />
-      <workItem from="1574273754306" duration="5442000" />
+      <workItem from="1574273754306" duration="5696000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -438,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574264276480</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="fix operations">
+      <created>1574282494387</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1574282494387</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
