@@ -11,9 +11,10 @@
 <form th:action="@{/registration}" method="post">
 
 <div class="container">
+	Добавление нового пользователя
 	<img th:src="@{img/men.png}">
 	<form>
-		Добавление нового пользователя
+
 		<div class="dws-input">
 			<input type="text" name="username" placeholder="Введите логин">
 		</div>
@@ -21,6 +22,7 @@
 			<input type="password" name="password" placeholder="Введите пароль">
 		</div>
 		<input class="dws-submit" type="submit" name="submit" value="Зарегистрироваться"><br />
+		<a href="/login">Войти</a>
 	</form>
 </div>
 </form>

@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +177,7 @@
       <workItem from="1574063634212" duration="36579000" />
       <workItem from="1574168191662" duration="36989000" />
       <workItem from="1574273660006" duration="58000" />
-      <workItem from="1574273754306" duration="6987000" />
+      <workItem from="1574273754306" duration="7656000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -437,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574282795283</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="fix operations">
+      <created>1574283992431</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1574283992431</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
