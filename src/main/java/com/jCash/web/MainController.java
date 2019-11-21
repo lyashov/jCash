@@ -87,6 +87,12 @@ public class MainController {
         UsersEntity usersEntity = usersService.getUserByName(getCurrentUsername());
         List<OperationsEntity> list = operationsService.getAllByUser(usersEntity);
         model.addAttribute("operations", list);
+
+        List<TypeOperationsEntity> listDebit = typeOperationsService.getAllTypeOperationsByDeditCredit(0);
+        model.addAttribute("typeoperationsdebit", listDebit);
+
+        List<TypeOperationsEntity> listCredit = typeOperationsService.getAllTypeOperationsByDeditCredit(1);
+        model.addAttribute("typeoperationscredit", listCredit);
         return "operations";
     }
 
