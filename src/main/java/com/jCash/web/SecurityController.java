@@ -1,8 +1,11 @@
 package com.jCash.web;
 
+import com.google.common.collect.ImmutableList;
+import com.jCash.configs.Role;
 import com.jCash.exception.RecordNotFoundException;
 import com.jCash.model.UsersEntity;
 import com.jCash.repository.UsersRepository;
+import com.jCash.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +26,8 @@ public class SecurityController {
 
     @Autowired
     private UsersRepository usersRepo;
+    @Autowired
+    private UsersService usersService;
 
     @GetMapping("/registration")
     public String registration() {
@@ -34,16 +39,18 @@ public class SecurityController {
     }
 
     @PostMapping("/registration")
-    public String addUser(@RequestParam(name="username", required=false, defaultValue="Username") String name, Model model) throws RecordNotFoundException {
+    public String addUser(@RequestParam(name="username", required=false, defaultValue="Username") String username,
+                          @RequestParam(name="password", required=false, defaultValue="password") String password,
+                          Model model) {
 
-        UsersEntity usr = usersRepo.findByUsername("Vasua");
-        if(usr != null){
-            model.addAttribute("message", "User exists!");
-            return "registration";
-        }
-     //   usr.setActive(true);
-     //   usr.setRoles(Collections.singleton(Role.USER));
-      //  usr.
-        return "redirect:/login";
+        UsersEntity usersEntity = usersRepo.findByUsername(username);
+        if(usersEntity != null){
+            usersEntity.setUsername(username);
+            usersEntity.setPassword(password);
+            usersService.save(usersEntity);
+            return "redirect:/operations";
+        } else
+                usersService.create(username, password);
+        return "redirect:/operations";
     }
 }

@@ -1,5 +1,7 @@
 package com.jCash.service;
 
+import com.google.common.collect.ImmutableList;
+import com.jCash.configs.Role;
 import com.jCash.exception.RecordNotFoundException;
 import com.jCash.model.UsersEntity;
 import com.jCash.repository.UsersRepository;
@@ -63,31 +65,20 @@ public class UsersService {
         }
     }
 
-
-  /*  public TypeOperationsEntity createOrUpdateDocor(TypeOperationsEntity entity) throws RecordNotFoundException
-    {
-        Optional<TypeOperationsEntity> doctor = repository.findById(entity.getId());
-
-        if(doctor.isPresent())
-        {
-            TypeOperationsEntity newEntity = doctor.get();
-            newEntity.setFirstName(entity.getFirstName());
-            newEntity.setSecondName(entity.getLastName());
-            newEntity.setLastName(entity.getLastName());
-            newEntity.setLogin(entity.getLastName());
-            newEntity.setPassword(entity.getEmail());
-            newEntity.setEmail(entity.getEmail());
-
-            newEntity = repository.save(newEntity);
-
-            return newEntity;
-        } else {
-            entity = repository.save(entity);
-
-            return entity;
-        }
+    public UsersEntity create(String username, String password) {
+            UsersEntity entityNew = new UsersEntity();
+            entityNew.setId(4L);
+            entityNew.setActive(true);
+            entityNew.setUsername(username);
+            entityNew.setPassword(password);
+            entityNew.setAuthorities(ImmutableList.of(Role.USER));
+            entityNew.setAccountNonExpired(true);
+            entityNew.setAccountNonLocked(true);
+            entityNew.setEnabled(true);
+            entityNew.setCredentialsNonExpired(true);
+            return repository.save(entityNew);
     }
-*/
+
   public void save(UsersEntity usersEntity)
   {
       repository.save(usersEntity);
