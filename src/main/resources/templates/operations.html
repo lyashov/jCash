@@ -6,40 +6,69 @@
     <div th:replace="fragments/header :: header"></div>
     <title>Spring Boot Thymeleaf Hello World Example</title>
 
-    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+    <script th:href="@{/webjars/jquery/3.4.0/jquery.min.js} "></script>
 
 </head>
 
 <body>
 <div th:replace="fragments/navbar :: navbar"></div>
 
-<main role="main" class="container">
+Приветствие пользователя:
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm">
+            <div class="row">
+
+                <label for="sel1">Тип операции прихода:</label>
+                <select  class="form-control" id="sel1" name="sellist1">
+                    <option th:each="t: ${typeoperationsdebit}"
+                            th:value="${t.getOperation()}"
+                            th:utext="${t.getOperation()}"/>
+                </select>
+
+                <button type="button" class="btn btn-success">Приход</button>
+            </div>
+            <div class="row">
+
+                <label for="sel1">Тип операции расхода:</label>
+                <select class="form-control" id="sel2" name="sellist2">
+                    <option th:each="t: ${typeoperationscredit}"
+                            th:value="${t.getOperation()}"
+                            th:text="${t.getOperation()}"/>
+                </select>
+
+                <button type="button" class="btn btn-danger">Расход</button>
+            </div>
+        </div>
+
+        <div class="col-sm">
+            <table class="table table-striped">
+                <tr>
+                    <th width="80">Дата операции</th>
+                    <th width="120">Карта/Нал</th>
+                    <th width="120">Дебит/Кредит</th>
+                    <th width="120">Типа операции</th>
+                    <th width="60">Сумма</th>
+                    <th width="60">Юзер</th>
+
+                </tr>
+                <tr th:each="operation: ${operations}">
+                    <td th:text="${operation.getData_operation()}"></td>
+                    <td th:text="${operation.getCard_cash()}"></td>
+                    <td th:text="${operation.getDebit_credit()}"></td>
+                    <td th:text="${operation.getTypeOperation()}"></td>
+                    <td th:text="${operation.getSum()}"></td>
+                    <td th:text="${operation.getUser()}"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
 
 
-</main>
 
-    <table class="table table-striped">
-        <tr>
-            <th width="80">ID</th>
-            <th width="80">Дата операции</th>
-            <th width="120">Карта/Нал</th>
-            <th width="120">Дебит/Кредит</th>
-            <th width="120">Типа операции</th>
-            <th width="60">Сумма</th>
-            <th width="60">Юзер</th>
-
-        </tr>
-        <tr th:each="operation: ${operations}">
-            <td th:text="${operation.getId()}"/>
-            <td th:text="${operation.getData_operation()}"/>
-            <td th:text="${operation.getCard_cash()}"/>
-            <td th:text="${operation.getDebit_credit()}"/>
-            <td th:text="${operation.getTypeOperation()}"/>
-            <td th:text="${operation.getSum()}"/>
-            <td th:text="${operation.getUser()}"/>
-        </tr>
-    </table>
 
 </body>
 </html>

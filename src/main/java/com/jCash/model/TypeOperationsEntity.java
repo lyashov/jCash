@@ -11,8 +11,8 @@ public class TypeOperationsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="debit_credit", nullable=false)
-    private Integer debit_credit;
+    @Column(name="debitcredit", nullable=false)
+    private Integer debitcredit;
 
     @Column(name="operation", nullable=false, length=200)
     private String operation;
@@ -25,12 +25,12 @@ public class TypeOperationsEntity {
         this.id = id;
     }
 
-    public Integer getDebit_credit() {
-        return debit_credit;
+    public Integer getDebitcredit() {
+        return debitcredit;
     }
 
-    public void setDebit_credit(Integer debit_credit) {
-        this.debit_credit = debit_credit;
+    public void setDebitcredit(Integer debitcredit) {
+        this.debitcredit = debitcredit;
     }
 
     public String getOperation() {

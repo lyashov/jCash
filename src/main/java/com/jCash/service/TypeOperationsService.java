@@ -40,6 +40,17 @@ public class TypeOperationsService {
         }
     }
 
+    public List<TypeOperationsEntity> getAllTypeOperationsByDeditCredit(Integer debitCredit)
+    {
+        List<TypeOperationsEntity> typeOperationsList = repository.getAllByDebitcredit(debitCredit);
+
+        if(typeOperationsList.size() > 0) {
+            return typeOperationsList;
+        } else {
+            return new ArrayList<TypeOperationsEntity>();
+        }
+    }
+
     public TypeOperationsEntity getDoctorById(Long id) throws RecordNotFoundException
     {
         Optional<TypeOperationsEntity> TypeOperations = repository.findById(id);
