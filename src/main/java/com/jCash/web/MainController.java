@@ -1,5 +1,6 @@
 package com.jCash.web;
 
+import com.jCash.exception.RecordNotFoundException;
 import com.jCash.model.TypeOperationsEntity;
 import com.jCash.model.OperationsEntity;
 import com.jCash.model.UsersEntity;
@@ -7,6 +8,8 @@ import com.jCash.service.OperationsService;
 import com.jCash.service.UsersService;
 import com.jCash.service.TypeOperationsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,23 +48,38 @@ public class MainController {
         return "users";
     }
 
+    public String getCurrentUsername() {
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        return auth.getName();
+    }
+
     @RequestMapping(value = "/operations", method = RequestMethod.GET)
-    public String listOperations(Model model){
-        List<OperationsEntity> list = operationsService.getAllOperations();
+    public String listUserOperations(Model model) throws RecordNotFoundException {
+        UsersEntity usersEntity = usersService.getUserByName(getCurrentUsername());
+        List<OperationsEntity> list = operationsService.getAllByUser(usersEntity);
         model.addAttribute("operations", list);
         return "operations";
     }
 
-    @RequestMapping(value = "/typeoperations", method = RequestMethod.GET)
-    public String listTypeOperations(Model model) {
+    @RequestMapping(value = "/typeoperationsdebit", method = RequestMethod.GET)
+    public String listTypeOperationsDebit(Model model) {
         List<TypeOperationsEntity> list = typeOperationsService.getAllTypeOperations();
-        model.addAttribute("typeoperations", list);
-        return "typeoperations";
+        model.addAttribute("typeoperationsdebit", list);
+        return "typeoperationsdebit";
     }
 
-    @GetMapping("/")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="Username") String name, Model model) {
-        model.addAttribute("name", name);
+    @RequestMapping(value = "/typeoperationscredit", method = RequestMethod.GET)
+    public String listTypeOperationsCredit(Model model) {
+        List<TypeOperationsEntity> list = typeOperationsService.getAllTypeOperations();
+        model.addAttribute("typeoperationscredit", list);
+        return "typeoperationscredit";
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String IndexUserOperations(Model model) throws RecordNotFoundException {
+        UsersEntity usersEntity = usersService.getUserByName(getCurrentUsername());
+        List<OperationsEntity> list = operationsService.getAllByUser(usersEntity);
+        model.addAttribute("operations", list);
         return "operations";
     }
 

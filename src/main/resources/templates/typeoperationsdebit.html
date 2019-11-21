@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <div th:replace="fragments/header :: header"></div>
+    <title>Spring Boot Thymeleaf Hello World Example</title>
+</head>
+
+<body>
+
+<div th:replace="fragments/navbar :: navbar"></div>
+
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+            <th width="80">ID</th>
+            <th width="120">Type operation</th>
+        </tr>
+        <tr th:each="t: ${typeoperations}">
+            <td th:text="${t.getId()}"/>
+            <td th:text="${t.getDebit_credit()}"/>
+            <td th:text="${t.getOperation()}"/>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

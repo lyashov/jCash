@@ -18,7 +18,7 @@ public class OperationsEntity {
     @Column(name="data_operation", nullable=false)
     private Date data_operation;
 
-    @ManyToOne (optional=false)
+    @ManyToOne (optional=false, fetch = FetchType.EAGER)
     @JoinColumn (name="id_user",referencedColumnName="id")
     private UsersEntity user;
 

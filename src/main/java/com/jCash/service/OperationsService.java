@@ -1,7 +1,9 @@
 package com.jCash.service;
 
+import com.jCash.configs.User;
 import com.jCash.exception.RecordNotFoundException;
 import com.jCash.model.OperationsEntity;
+import com.jCash.model.UsersEntity;
 import com.jCash.repository.OperationsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,6 +34,17 @@ public class OperationsService {
     public List<OperationsEntity> getAllOperations()
     {
         List<OperationsEntity> OperationsList = repository.findAll();
+
+        if(OperationsList.size() > 0) {
+            return OperationsList;
+        } else {
+            return new ArrayList<OperationsEntity>();
+        }
+    }
+
+    public List<OperationsEntity> getAllByUser(UsersEntity usersEntity)
+    {
+        List<OperationsEntity> OperationsList = repository.findByUser(usersEntity);
 
         if(OperationsList.size() > 0) {
             return OperationsList;
