@@ -51,7 +51,7 @@ public class TypeOperationsService {
         }
     }
 
-    public TypeOperationsEntity getDoctorById(Long id) throws RecordNotFoundException
+    public TypeOperationsEntity getTypeOperationsById(Long id) throws RecordNotFoundException
     {
         Optional<TypeOperationsEntity> TypeOperations = repository.findById(id);
 
@@ -59,6 +59,17 @@ public class TypeOperationsService {
             return TypeOperations.get();
         } else {
             throw new RecordNotFoundException("No doctor record exist for given id");
+        }
+    }
+
+    public TypeOperationsEntity findByOperation(String operation) throws RecordNotFoundException
+    {
+        Optional<TypeOperationsEntity> TypeOperations = Optional.ofNullable(repository.findByOperation(operation));
+
+        if(TypeOperations.isPresent()) {
+            return TypeOperations.get();
+        } else {
+            throw new RecordNotFoundException("No type operation record exist for given id");
         }
     }
 

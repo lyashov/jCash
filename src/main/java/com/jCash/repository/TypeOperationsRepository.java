@@ -13,5 +13,6 @@ import java.util.List;
 public interface TypeOperationsRepository
         extends JpaRepository<TypeOperationsEntity, Long> {
     List<TypeOperationsEntity> getAllByDebitcredit(Integer debitCredit);
+    TypeOperationsEntity findByOperation(String operation);
 
 }

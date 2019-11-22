@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -66,23 +67,33 @@ public class MainController {
 
     @PostMapping("/operations")
     public String listPostTypeOperationsDebit(
-            @RequestParam(name="sellist1", required=false) String sellistDebit,
+            @RequestParam(name="sellistDebit", required=false) String sellistDebit,
             @RequestParam(name="sumDebit", required=false) String sumDebit,
-            @RequestParam(name="sellist1", required=false) String sellistCredit,
-            @RequestParam(name="sumDebit", required=false) String sumCredit,
+            @RequestParam(name="sellistCredit", required=false) String sellistCredit,
+            @RequestParam(name="sumCredit", required=false) String sumCredit,
             Model model) throws RecordNotFoundException {
 
         OperationsEntity operationsEntity= new OperationsEntity();
+        operationsEntity.setCard_cash(1L);
+        operationsEntity.setComment("comment");
+        operationsEntity.setDebit_credit(1);
 
-       /* operationsEntity.setCard_cash();
-        operationsEntity.setComment();
-        operationsEntity.setData_operation();
-        operationsEntity.setDebit_credit();
-        operationsEntity.setSum();
-        operationsEntity.setTypeOperation();
-        operationsEntity.setUser();*/
 
-        operationsService.addOperation(operationsEntity);
+
+        UsersEntity usersEntity = usersService.getUserByName(getCurrentUsername());
+        if (sumDebit != null) {
+            TypeOperationsEntity typeOperationsEntity = typeOperationsService.findByOperation(sellistDebit);
+            Double summDebit = Double.parseDouble(sumDebit);
+            operationsEntity.setSum(summDebit);
+            operationsEntity.setTypeOperation(typeOperationsEntity);
+            operationsEntity.setUser(usersEntity);
+            operationsEntity.setData_operation(new Date());
+            operationsEntity.setId(22L);
+            operationsService.addOperation(operationsEntity);
+        }
+     //   operationsEntity.setData_operation();
+
+
 
         renderPageOperations(model);
         return "operations";
@@ -92,6 +103,14 @@ public class MainController {
     public String listUserOperations(Model model) throws RecordNotFoundException {
         renderPageOperations(model);
         return "operations";
+    }
+
+
+    @RequestMapping(value = "/typeoperationsdebit", method = RequestMethod.GET)
+    public String listTypeOperationsDebit(Model model) {
+        List<TypeOperationsEntity> list = typeOperationsService.getAllTypeOperationsByDeditCredit(1);
+        model.addAttribute("typeoperationsdebit", list);
+        return "typeoperationsdebit";
     }
 
     @RequestMapping(value = "/typeoperationscredit", method = RequestMethod.GET)

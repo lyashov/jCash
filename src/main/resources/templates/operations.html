@@ -4,6 +4,11 @@
     <div th:replace="fragments/header :: header"></div>
     <title>Spring Boot Thymeleaf Hello World Example</title>
     <script type="text/javascript">
+        function myFunc()
+        {
+            var style = document.getElementById('sel1').style
+                style.visibility = "hidden";
+        }
     </script>
 </head>
 <body onload="myFunc()">
@@ -17,13 +22,21 @@
                 <script type="text/javascript"><!--
                 function showHide (id)
                 {
-                    var style = document.getElementById(id).style
+                    var style = document.getElementById('sel1').style
                     if (style.visibility == "hidden")
                         style.visibility = "visible";
                     else
-                        style.visibility = "hidden";}
+                        style.visibility = "hidden";
+
+                    var style = document.getElementById('sel2').style
+                    if (style.visibility == "hidden")
+                        style.visibility = "visible";
+                    else
+                        style.visibility = "hidden";
+                }
                 --></script>
-                <input type="checkbox" onclick="showHide('sel2');" />
+                <input type="checkbox" value="Приход/Расход" onclick="showHide('sel2');" />
+                <br>
                 <input type="number" name="sumDebit" value="0" min="0" max="100000" step="100"/>
                 <button type="submit" class="btn btn-success" name="bt1" onclick="return confirm('Подтверждаю')" >Приход</button>
             </div>

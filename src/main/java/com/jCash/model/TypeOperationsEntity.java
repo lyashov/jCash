@@ -21,6 +21,6 @@ public class TypeOperationsEntity {
 
     @Override
     public String toString() {
-        return getOperation();
+        return operation;
     }
 }

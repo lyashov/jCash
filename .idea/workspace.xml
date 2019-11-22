@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/TypeOperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/TypeOperationsEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/service/OperationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/OperationsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/repository/TypeOperationsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/repository/TypeOperationsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/service/TypeOperationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/TypeOperationsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/operations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/operations.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -204,7 +200,7 @@
       <workItem from="1574273660006" duration="58000" />
       <workItem from="1574273754306" duration="35745000" />
       <workItem from="1574361166930" duration="2608000" />
-      <workItem from="1574407135708" duration="17709000" />
+      <workItem from="1574407135708" duration="25963000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -514,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574352218853</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="bootstrap">
+      <created>1574447417096</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1574447417096</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -568,8 +571,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java</url>
-          <line>87</line>
-          <option name="timeStamp" value="37" />
+          <line>75</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

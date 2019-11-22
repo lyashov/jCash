@@ -13,7 +13,7 @@ public class OperationsEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
 
     @Column(name="data_operation", nullable=false)
     private Date data_operation;
@@ -45,4 +45,20 @@ public class OperationsEntity {
     public String getCard_cash() {
         return (card_cash == 0) ? "Наличными" : "Картой";
     }
+
+    @Override
+    public String toString() {
+        return "OperationsEntity{" +
+                "id=" + id +
+                ", data_operation=" + data_operation +
+                ", user=" + user +
+                ", debit_credit=" + debit_credit +
+                ", typeOperation=" + typeOperation +
+                ", card_cash=" + card_cash +
+                ", sum=" + sum +
+                ", comment='" + comment + '\'' +
+                '}';
+    }
+
+
 }
