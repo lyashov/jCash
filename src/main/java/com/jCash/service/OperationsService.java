@@ -87,16 +87,22 @@ public class OperationsService {
             return entity;
         }
     }
+*/
 
-    public void deleteDocdorById(Long id) throws RecordNotFoundException
+    public OperationsEntity addOperation(OperationsEntity entity) {
+        entity = repository.save(entity);
+        return entity;
+    }
+
+    public void deleteOperationById(Long id) throws RecordNotFoundException
     {
-        Optional<PacientsEntity> pacient = repository.findById(id);
+        Optional<OperationsEntity> operationsEntity = repository.findById(id);
          
-        if(pacient.isPresent())
+        if(operationsEntity.isPresent())
         {
             repository.deleteById(id);
         } else {
             throw new RecordNotFoundException("No doctor record exist for given id");
         }
-    }*/
+    }
 }

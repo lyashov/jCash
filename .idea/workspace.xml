@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f25990be-4685-42fa-8871-d7a38517759d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/configs/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/OperationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/TypeOperationsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/TypeOperationsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/model/UsersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/service/OperationsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/service/OperationsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/operations.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/operations.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,6 +19,25 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="PostgreSQL - postgres@172.17.0.3" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,6 +63,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -174,7 +202,9 @@
       <workItem from="1574063634212" duration="36579000" />
       <workItem from="1574168191662" duration="36989000" />
       <workItem from="1574273660006" duration="58000" />
-      <workItem from="1574273754306" duration="33244000" />
+      <workItem from="1574273754306" duration="35745000" />
+      <workItem from="1574361166930" duration="2608000" />
+      <workItem from="1574407135708" duration="17709000" />
     </task>
     <task id="LOCAL-00001" summary="go!!!">
       <created>1572867815120</created>
@@ -477,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574344448591</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="bootstrap">
+      <created>1574352218853</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1574352218853</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +550,8 @@
     <MESSAGE value="auth" />
     <MESSAGE value="fix operations" />
     <MESSAGE value="lists option" />
-    <option name="LAST_COMMIT_MESSAGE" value="lists option" />
+    <MESSAGE value="bootstrap" />
+    <option name="LAST_COMMIT_MESSAGE" value="bootstrap" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -530,13 +568,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java</url>
-          <line>57</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/jCash/web/MainController.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="36" />
+          <line>87</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

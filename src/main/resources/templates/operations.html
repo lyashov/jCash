@@ -3,36 +3,44 @@
 <head>
     <div th:replace="fragments/header :: header"></div>
     <title>Spring Boot Thymeleaf Hello World Example</title>
+    <script type="text/javascript">
+    </script>
 </head>
-
-<body>
+<body onload="myFunc()">
 <div th:replace="fragments/navbar :: navbar"></div>
-
 Приветствие пользователя:
-
+<form th:action="@{/operations}" method="POST" name="form1">
 <div class="container">
     <div class="row">
         <div class="col-sm">
             <div class="row">
-
+                <script type="text/javascript"><!--
+                function showHide (id)
+                {
+                    var style = document.getElementById(id).style
+                    if (style.visibility == "hidden")
+                        style.visibility = "visible";
+                    else
+                        style.visibility = "hidden";}
+                --></script>
+                <input type="checkbox" onclick="showHide('sel2');" />
+                <input type="number" name="sumDebit" value="0" min="0" max="100000" step="100"/>
+                <button type="submit" class="btn btn-success" name="bt1" onclick="return confirm('Подтверждаю')" >Приход</button>
+            </div>
+            <div class="row">
                 <label for="sel1">Тип операции прихода:</label>
-                <select  class="form-control" id="sel1" name="sellist1">
+                <select  class="form-control" id="sel1" name="sellistDebit">
                     <option th:each="t: ${typeoperationsdebit}"
                             th:value="${t.getOperation()}"
                             th:utext="${t.getOperation()}"/>
                 </select>
-
-                <button type="button" class="btn btn-success">Приход</button>
-            </div>
-            <div class="row">
-
-                <label for="sel1">Тип операции расхода:</label>
-                <select class="form-control" id="sel2" name="sellist2">
+                <label for="sel2">Тип операции расхода:</label>
+                <select class="form-control" id="sel2" name="sellistCredit">
                     <option th:each="t: ${typeoperationscredit}"
                             th:value="${t.getOperation()}"
                             th:text="${t.getOperation()}"/>
                 </select>
-
+                <input type="number" name="sumCredit" value="0" min="0" max="100000" step="100"/>
                 <button type="button" class="btn btn-danger">Расход</button>
             </div>
         </div>
@@ -61,7 +69,7 @@
     </div>
 </div>
 
-
+</form>
 
 
 </body>

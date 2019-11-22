@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,7 +40,6 @@ public class MainController {
         this.operationsService = operationsService;
     }
 
-
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String listUsers(Model model){
         List<UsersEntity> list = usersService.getAllUsers();
@@ -53,8 +52,7 @@ public class MainController {
         return auth.getName();
     }
 
-    @RequestMapping(value = "/operations", method = RequestMethod.GET)
-    public String listUserOperations(Model model) throws RecordNotFoundException {
+    private void renderPageOperations(Model model) throws RecordNotFoundException {
         UsersEntity usersEntity = usersService.getUserByName(getCurrentUsername());
         List<OperationsEntity> list = operationsService.getAllByUser(usersEntity);
         model.addAttribute("operations", list);
@@ -64,15 +62,36 @@ public class MainController {
 
         List<TypeOperationsEntity> listCredit = typeOperationsService.getAllTypeOperationsByDeditCredit(1);
         model.addAttribute("typeoperationscredit", listCredit);
+    }
 
+    @PostMapping("/operations")
+    public String listPostTypeOperationsDebit(
+            @RequestParam(name="sellist1", required=false) String sellistDebit,
+            @RequestParam(name="sumDebit", required=false) String sumDebit,
+            @RequestParam(name="sellist1", required=false) String sellistCredit,
+            @RequestParam(name="sumDebit", required=false) String sumCredit,
+            Model model) throws RecordNotFoundException {
+
+        OperationsEntity operationsEntity= new OperationsEntity();
+
+       /* operationsEntity.setCard_cash();
+        operationsEntity.setComment();
+        operationsEntity.setData_operation();
+        operationsEntity.setDebit_credit();
+        operationsEntity.setSum();
+        operationsEntity.setTypeOperation();
+        operationsEntity.setUser();*/
+
+        operationsService.addOperation(operationsEntity);
+
+        renderPageOperations(model);
         return "operations";
     }
 
-    @RequestMapping(value = "/typeoperationsdebit", method = RequestMethod.GET)
-    public String listTypeOperationsDebit(Model model) {
-        List<TypeOperationsEntity> list = typeOperationsService.getAllTypeOperationsByDeditCredit(0);
-        model.addAttribute("typeoperationsdebit", list);
-        return "typeoperationsdebit";
+    @RequestMapping(value = "/operations", method = RequestMethod.GET)
+    public String listUserOperations(Model model) throws RecordNotFoundException {
+        renderPageOperations(model);
+        return "operations";
     }
 
     @RequestMapping(value = "/typeoperationscredit", method = RequestMethod.GET)
@@ -84,15 +103,7 @@ public class MainController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String IndexUserOperations(Model model) throws RecordNotFoundException {
-        UsersEntity usersEntity = usersService.getUserByName(getCurrentUsername());
-        List<OperationsEntity> list = operationsService.getAllByUser(usersEntity);
-        model.addAttribute("operations", list);
-
-        List<TypeOperationsEntity> listDebit = typeOperationsService.getAllTypeOperationsByDeditCredit(0);
-        model.addAttribute("typeoperationsdebit", listDebit);
-
-        List<TypeOperationsEntity> listCredit = typeOperationsService.getAllTypeOperationsByDeditCredit(1);
-        model.addAttribute("typeoperationscredit", listCredit);
+        renderPageOperations(model);
         return "operations";
     }
 

@@ -1,8 +1,10 @@
 package com.jCash.model;
 
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.*;
+@Data
 @Entity
 @Table(name="TYPE_OPERATIONS")
 public class TypeOperationsEntity {
@@ -16,30 +18,6 @@ public class TypeOperationsEntity {
 
     @Column(name="operation", nullable=false, length=200)
     private String operation;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Integer getDebitcredit() {
-        return debitcredit;
-    }
-
-    public void setDebitcredit(Integer debitcredit) {
-        this.debitcredit = debitcredit;
-    }
-
-    public String getOperation() {
-        return operation;
-    }
-
-    public void setOperation(String operation) {
-        this.operation = operation;
-    }
 
     @Override
     public String toString() {
